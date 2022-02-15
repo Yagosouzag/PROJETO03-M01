@@ -230,7 +230,7 @@ function minerar() {
         status.sono = status.sono + 4;
         status.fome = status.fome + 5;
         status.xp = status.xp + 20;
-        status.saude = status.saude - 100;
+        status.saude = status.saude - 10;
         tempo.passarTempo(2);
         console.log();
         console.log('Deseja minerar novamente?');
@@ -411,7 +411,8 @@ while (iniciarjogo == 's' || iniciarjogo == 'sim') {
     Digite 3 para dormir,
     Digite 4 para ir comer,
     Digite 5 para fazer o portal do fim,
-    Digite 6 para parar o jogo! `);
+    Digite 6 para fazer uma espada,
+    Digite 7 para parar o jogo! `);
         console.log();
         let decisao = +prompt('Digite sua resposta: ');
         console.log();
@@ -427,6 +428,8 @@ while (iniciarjogo == 's' || iniciarjogo == 'sim') {
         } else if (decisao == 5) {
             portalFim();
         } else if (decisao == 6) {
+            fazerEspada();
+        } else if (decisao == 7) {
             console.log('Obrigado por jogar!');
             break;
         } else if (
@@ -435,7 +438,8 @@ while (iniciarjogo == 's' || iniciarjogo == 'sim') {
             decisao != 3 ||
             decisao != 4 ||
             decisao != 5 ||
-            decisao != 6
+            decisao != 6 ||
+            decisao != 7
         ) {
             decisao = +prompt('Numero inválido, Digite novamente:  ');
         }
